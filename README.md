@@ -36,19 +36,6 @@ https://www.tutorialspoint.com/implementation-of-and-gate-from-nand-gate
 
 https://www.tutorialspoint.com/implementation-of-not-gate-using-nand-gate
 
-### Implementation of XOR Gate from NAND Gate
-
-![image](https://github.com/marouene-djabbar/build-computer/assets/165311266/9be158c0-8aae-40cc-a1fb-3c3f13a1e981)
-
-https://www.tutorialspoint.com/implementation-of-xor-gate-from-nand-gate
-
-### Implementation of OR Gate from NAND Gate
-
-
-![image](https://github.com/marouene-djabbar/build-computer/assets/165311266/c98fb604-53e6-44b0-8e29-d492adbc81c5)
-
-https://www.tutorialspoint.com/implementation-of-or-gate-from-nand-gate
-
 ## My design for an Xor gate using Nand only
 
 ![image](https://github.com/marouene-djabbar/HDL-Programming-Language/assets/165311266/cbc5f1e7-07d6-439d-933d-4256685f3773)
@@ -82,8 +69,10 @@ CHIP XOr {
 }
 '''
 
+## Math behind the Xor gate design
 
-
+c XOR f == (c Or f) and (NOT(c and f)) == (c Or f)  and (c Nand f) == Not ((c Or f)  and (c Nand f))
+c Or f == Not((not c) And (not f)) == Not ( Not((not c) Nand (not f))) == (not c) Nand (not f)
 
 
 
