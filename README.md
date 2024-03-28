@@ -22,6 +22,38 @@ https://www.geeksforgeeks.org/what-is-nand-gate/
 
 https://en.wikipedia.org/wiki/NAND_gate
 
+## Examples of NAND implimentatons:
+
+### Implementation of AND Gate from NAND Gate
+
+![image](https://github.com/marouene-djabbar/build-computer/assets/165311266/24a5c105-d0f1-4f0d-af8a-934d02353a3c)
+
+https://www.tutorialspoint.com/implementation-of-and-gate-from-nand-gate
+
+### Implementation of NOT Gate using NAND Gate
+
+![image](https://github.com/marouene-djabbar/build-computer/assets/165311266/32c3bcaa-e743-41e8-a13d-f75a670aa866)
+
+https://www.tutorialspoint.com/implementation-of-not-gate-using-nand-gate
+
+### Implementation of XOR Gate from NAND Gate
+
+![image](https://github.com/marouene-djabbar/build-computer/assets/165311266/9be158c0-8aae-40cc-a1fb-3c3f13a1e981)
+
+https://www.tutorialspoint.com/implementation-of-xor-gate-from-nand-gate
+
+### Implementation of OR Gate from NAND Gate
+
+
+![image](https://github.com/marouene-djabbar/build-computer/assets/165311266/c98fb604-53e6-44b0-8e29-d492adbc81c5)
+
+https://www.tutorialspoint.com/implementation-of-or-gate-from-nand-gate
+
+
+
+
+
+
 
 
 
