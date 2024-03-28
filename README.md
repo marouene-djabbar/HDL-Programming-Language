@@ -13,6 +13,9 @@ In tearms of transistors:
 
 ![image](https://github.com/marouene-djabbar/build-computer/assets/165311266/6f52fce6-8b1b-41f0-aff4-012dea48cfc6)
 
+When both inputs A and B are ‘on’ (logic level 1 or high voltage), current flows through both transistors (Q1 and Q2), grounding the output node, making the output 'low' or 0.
+When either A or B is 'off' (logic level 0 or low voltage), the corresponding transistor is off, which means it does not conduct, and the current cannot flow completely to ground. Instead, the pull-up resistor (R) pulls the output node up to a high voltage, making the output 'high' or 1.
+
 https://www.geeksforgeeks.org/what-is-nand-gate/
 
 ![image](https://github.com/marouene-djabbar/build-computer/assets/165311266/fd75691f-d697-4462-977c-d15946e13d0d)
