@@ -3,9 +3,10 @@ CHIP Or {
     OUT out;
 
     PARTS:
-    Nand(a=c, b=c, out=notc);
-    Nand(a=f, b=f, out=notf);
-	Nand(a=notc, b=notf, out=notcNandnotf)
-	Nand(a=notcNandnotf, b=notcNandnotf, out=out);
+    // c Or F  == Not((not c) And (not f)) == Not [ Not((not c) Nand (not f))] == (not c) Nand (not f)
+	// Inverting c and f to prepare for the OR operation
+    Nand(a=c, b=c, out=notc); // not c
+    Nand(a=f, b=f, out=notf); // Not f
+	Nand(a=notc, b=notf, out=out) // (not c) Nand (not f) == c Or F
 	
 }
