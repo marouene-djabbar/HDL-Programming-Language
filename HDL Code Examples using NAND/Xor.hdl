@@ -1,0 +1,26 @@
+CHIP XOr {
+    IN c, f;
+    OUT out;
+
+    PARTS:
+	
+	//XOR == (c Or f)  and (NOT(c and f)) == (c Or f)  and (c Nand f) == Not[(c Or f)  Nand (c Nand f)]
+
+	// First stage: (c Or f)
+    // c Or F  == (not c) And (not f) == Not ((not c) Nand (not f))
+	// Inverting c and f to prepare for the OR operation
+    Nand(a=c, b=c, out=notc); // not c
+    Nand(a=f, b=f, out=notf); // Not f
+	Nand(a=notc, b=notf, out=notcNandnotf) // (not c) Nand (not f)
+	Nand(a=notcNandnotf, b=notcNandnotf, out=cOrf); Not ((not c) Nand (not f)) == (not c) And (not f) == c Or F
+	
+	// Second stage: (c Nand f)
+	Nand(a=c, b=f, out=cNandf);  //  c Nand f
+	
+	// Third stage: (c Or f)  Nand (c Nand f)
+	Nand(a=cOrf, b=cNandf, out=cOrfNandNandf);
+	
+	// Forth stage: Not[(c Or f)  Nand (c Nand f)]
+	Nand(a=cOrfNandNandf, b=cOrfNandNandf, out=out);
+	
+}
