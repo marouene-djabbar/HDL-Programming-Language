@@ -9,6 +9,10 @@ Using NAND gates to create various logic circuits is rooted in a fundamental con
 
 ![image](https://github.com/marouene-djabbar/build-computer/assets/165311266/85e2341c-2234-4b3e-a79b-92c74f11c7aa)
 
+In tearms of transistors:
+
+![image](https://github.com/marouene-djabbar/build-computer/assets/165311266/6f52fce6-8b1b-41f0-aff4-012dea48cfc6)
+
 https://www.geeksforgeeks.org/what-is-nand-gate/
 
 ![image](https://github.com/marouene-djabbar/build-computer/assets/165311266/fd75691f-d697-4462-977c-d15946e13d0d)
