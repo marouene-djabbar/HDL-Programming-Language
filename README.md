@@ -68,8 +68,8 @@ https://www.tutorialspoint.com/implementation-of-not-gate-using-nand-gate
 
 ## Math behind the Xor gate design
 
-c XOR f == (c Or f) and (NOT(c and f)) == (c Or f)  and (c Nand f) == Not ((c Or f)  and (c Nand f))
-c Or f == Not((not c) And (not f)) == Not ( Not((not c) Nand (not f))) == (not c) Nand (not f)
+c XOR f == (c Or f) and (Not (c and f)) == (c Or f)  and (c Nand f) == Not ((c Or f)  and (c Nand f))
+c Or f == Not ( (Not c) And (Not f)) == Not ( Not((Not c) Nand (Not f))) == (Not c) Nand (Not f)
 
 
 
