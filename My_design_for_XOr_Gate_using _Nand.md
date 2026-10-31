@@ -4,7 +4,7 @@
 
 ## My code
 
-    CHIP XOr {
+    CHIP Xor {
     IN c, f;
     OUT out;
     PARTS:    
@@ -15,7 +15,7 @@
     // Inverting c and f to prepare for the OR operation
     Nand(a=c, b=c, out=notc); // not c
     Nand(a=f, b=f, out=notf); // Not f
-    Nand(a=notc, b=notf, out=cOrf) // (not c) Nand (not f) == c Or F
+    Nand(a=notc, b=notf, out=cOrf); // (not c) Nand (not f) == c Or F
     
     // Second stage: (c Nand f)
     Nand(a=c, b=f, out=cNandf); // c Nand f
