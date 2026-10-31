@@ -1,4 +1,4 @@
-# build-computer
+# Building a Computer from NAND Gates
 ## HDL Language
 HDL stands for Hardware Description Language. It's used to model the structure, design, and operation of digital logic circuits, allowing for the simulation and synthesis of digital systems before they are physically built.
 ## Using NAND gates
@@ -42,7 +42,7 @@ https://www.tutorialspoint.com/implementation-of-not-gate-using-nand-gate
 
 ## My code
 
-    CHIP XOr {
+    CHIP Xor {
     IN c, f;
     OUT out;
     PARTS:    
@@ -53,7 +53,7 @@ https://www.tutorialspoint.com/implementation-of-not-gate-using-nand-gate
     // Inverting c and f to prepare for the OR operation
     Nand(a=c, b=c, out=notc); // not c
     Nand(a=f, b=f, out=notf); // Not f
-    Nand(a=notc, b=notf, out=cOrf) // (not c) Nand (not f) == c Or F
+    Nand(a=notc, b=notf, out=cOrf); // (not c) Nand (not f) == c Or F
     
     // Second stage: (c Nand f)
     Nand(a=c, b=f, out=cNandf); // c Nand f
@@ -71,12 +71,15 @@ https://www.tutorialspoint.com/implementation-of-not-gate-using-nand-gate
 1. c XOR f == (c Or f) and (Not (c and f)) == (c Or f)  and (c Nand f) == Not ((c Or f)  and (c Nand f)).
 2. c Or f == Not ( (Not c) And (Not f)) == Not ( Not((Not c) Nand (Not f))) == (Not c) Nand (Not f).
 
+## Gate count
 
+The XOR above uses six NAND gates, following directly from the algebra.
+The minimal NAND-only XOR uses four:
 
+    Nand(a=a,  b=b,  out=n1);
+    Nand(a=a,  b=n1, out=n2);
+    Nand(a=b,  b=n1, out=n3);
+    Nand(a=n2, b=n3, out=out);
 
-
-
-
-
-
-
+Both give the same truth table. The six-gate version is kept because it maps
+one-to-one onto the derivation above.
